@@ -1,14 +1,44 @@
 {#
-| Variable         | Type       | Description                                                         |
-|------------------|------------|---------------------------------------------------------------------|
-| page             | object     |                                                                     |
-| page.title       | string     | *could be html                                                      |
-| page.slug        | string     | ex: "cat.show"                                                      |
+  Antagonist custom homepage
 #}
+
 {% extends "layouts.master" %}
+
 {% block content %}
-    {% component home %}
+
+<section class="antagonist-home">
+  <p class="antagonist-home__eyebrow">
+    ANTAGONIST / DROP 001
+  </p>
+
+  <h1 class="antagonist-home__title">
+    Built Against<br>
+    The Default
+  </h1>
+
+  <p class="antagonist-home__text">
+    Antagonist is a streetwear label for people who do not blend into the colony.
+    Sharp silhouettes, limited drops, and controlled disorder.
+  </p>
+
+  <a href="/products" class="antagonist-home__button">
+    SHOP THE DROP
+  </a>
+</section>
+
+<section class="antagonist-story">
+  <h2 class="antagonist-story__title">
+    THE COLONY DOESN’T THINK.
+  </h2>
+
+  <p class="antagonist-story__text">
+    Antagonist starts with the ant: small alone, dangerous together.
+    The brand is not about rebellion for attention. It is about refusing the default path.
+  </p>
+</section>
+
 {% endblock %}
+
 {% block scripts %}
-    <script defer src="{{ 'home.js' | asset }}"></script>
+  <script defer src="{{ 'home.js' | asset }}"></script>
 {% endblock %}
