@@ -1,10 +1,10 @@
 {
-    "name": {
-        "ar": "رائد",
-        "en": "Theme Raed"
-    },
-    "repository": "https://github.com/SallaApp/theme-raed",
-    "author_email": "support@salla.sa",
+"name": {
+    "ar": "Antagonist",
+    "en": "Antagonist"
+},
+"repository": "https://github.com/saalbahat-beep/antagonist-salla-theme",
+"author_email": "sa.albahat@gmail.com",
     "features": [
         "mega-menu",
         "fonts",
