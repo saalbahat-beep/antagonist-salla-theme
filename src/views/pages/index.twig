@@ -1,41 +1,52 @@
 {#
-  Antagonist custom homepage
+  Antagonist pre-drop landing page
 #}
 
 {% extends "layouts.master" %}
 
 {% block content %}
 
-<section class="antagonist-home">
-  <p class="antagonist-home__eyebrow">
-    ANTAGONIST / DROP 001
-  </p>
+<main class="antagonist-landing">
 
-  <h1 class="antagonist-home__title">
-    Built Against<br>
-    The Default
-  </h1>
+  <div class="antagonist-landing__noise"></div>
 
-  <p class="antagonist-home__text">
-    Antagonist is a streetwear label for people who do not blend into the colony.
-    Sharp silhouettes, limited drops, and controlled disorder.
-  </p>
+  <section class="antagonist-landing__hero">
+    <div class="antagonist-landing__content">
 
-  <a href="/products" class="antagonist-home__button">
-    SHOP THE DROP
-  </a>
-</section>
+      <h1 class="antagonist-landing__brand-main">
+        ANTAGONIST
+      </h1>
 
-<section class="antagonist-story">
-  <h2 class="antagonist-story__title">
-    THE COLONY DOESN’T THINK.
-  </h2>
+      <p class="antagonist-landing__drop">
+        DROP 001 — COMING SOON
+      </p>
 
-  <p class="antagonist-story__text">
-    Antagonist starts with the ant: small alone, dangerous together.
-    The brand is not about rebellion for attention. It is about refusing the default path.
-  </p>
-</section>
+      <h2 class="antagonist-landing__title">
+        NOT FOR EVERYONE.
+      </h2>
+
+      <form class="antagonist-landing__form" action="#" method="post">
+        <input
+          class="antagonist-landing__input"
+          type="email"
+          name="email"
+          placeholder="email"
+          required
+        >
+
+        <button class="antagonist-landing__button" type="submit">
+          NOTIFY ME
+        </button>
+      </form>
+
+      <p class="antagonist-landing__note">
+        Join the first colony.
+      </p>
+
+    </div>
+  </section>
+
+</main>
 
 {% endblock %}
 
