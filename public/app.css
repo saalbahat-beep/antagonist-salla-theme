@@ -27194,38 +27194,50 @@ body.font-dinnextltarabic-regular .btn--add-to-cart {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
 }
-.antagonist-landing {
-  position: relative;
-  min-height: 100vh;
-  background: radial-gradient(circle at 50% 30%, rgba(255, 255, 255, 0.08), transparent 28%), radial-gradient(circle at 15% 85%, rgba(255, 255, 255, 0.04), transparent 26%), #050505;
-  color: #ffffff;
-  overflow: hidden;
+:root {
+  --ant-brown: #7a3b00;
+  --ant-white: #f2eee8;
 }
-.antagonist-landing__noise {
-  pointer-events: none;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  opacity: 0.07;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.14) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.14) 1px, transparent 1px);
-  background-size: 44px 44px;
-  -webkit-mask-image: radial-gradient(circle at center, black, transparent 76%);
-          mask-image: radial-gradient(circle at center, black, transparent 76%);
+.antagonist-landing {
+  min-height: 100vh;
+  background: #7a3b00;
+  background: var(--ant-brown);
+  color: #f2eee8;
+  color: var(--ant-white);
 }
 .antagonist-landing__hero {
-  position: relative;
-  z-index: 1;
   min-height: 100vh;
   padding: 28px;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  background: #7a3b00;
+  background: var(--ant-brown);
+}
+.antagonist-landing__topbar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.antagonist-landing__logo {
+  width: 96px;
+  height: 96px;
+  flex-shrink: 0;
+}
+.antagonist-landing__logo img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 .antagonist-landing__content {
+  flex: 1;
   width: min(760px, 100%);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  padding-bottom: 80px;
 }
 .antagonist-landing__brand-main {
   margin: 0;
@@ -27234,10 +27246,14 @@ body.font-dinnextltarabic-regular .btn--add-to-cart {
   letter-spacing: -0.08em;
   font-weight: 950;
   text-transform: uppercase;
+  color: #f2eee8;
+  color: var(--ant-white);
 }
 .antagonist-landing__drop {
-  margin: 22px 0 40px;
-  color: #9a9a9a;
+  margin: 22px 0 36px;
+  color: #f2eee8;
+  color: var(--ant-white);
+  opacity: 0.85;
   font-size: 12px;
   letter-spacing: 5px;
   font-weight: 700;
@@ -27245,56 +27261,67 @@ body.font-dinnextltarabic-regular .btn--add-to-cart {
 }
 .antagonist-landing__title {
   margin: 0;
-  font-size: max(44px, min(8vw, 96px));
-  line-height: 0.9;
-  letter-spacing: -0.06em;
-  font-weight: 950;
-  text-transform: uppercase;
+  font-size: max(48px, min(8vw, 96px));
+  line-height: 0.95;
+  letter-spacing: -0.055em;
+  font-weight: 850;
+  text-transform: none;
+  color: #f2eee8;
+  color: var(--ant-white);
 }
 .antagonist-landing__form {
   width: min(520px, 100%);
   margin: 42px auto 0;
   display: flex;
-  border: 1px solid rgba(255, 255, 255, 0.32);
-  background: rgba(255, 255, 255, 0.045);
-  backdrop-filter: blur(12px);
+  border: 1.5px solid #f2eee8;
+  border: 1.5px solid var(--ant-white);
+  background: transparent;
 }
 .antagonist-landing__input {
   flex: 1;
   min-width: 0;
   border: 0;
   background: transparent;
-  color: #ffffff;
+  color: #f2eee8;
+  color: var(--ant-white);
   padding: 18px 18px;
   font-size: 15px;
   outline: none;
   text-transform: lowercase;
 }
 .antagonist-landing__input::-moz-placeholder {
-  color: #777777;
+  color: #f2eee8;
+  color: var(--ant-white);
+  opacity: 0.75;
 }
 .antagonist-landing__input::placeholder {
-  color: #777777;
+  color: #f2eee8;
+  color: var(--ant-white);
+  opacity: 0.75;
 }
 .antagonist-landing__button {
   border: 0;
-  border-left: 1px solid rgba(255, 255, 255, 0.32);
-  background: #ffffff;
-  color: #050505;
+  border-left: 1.5px solid #f2eee8;
+  border-left: 1.5px solid var(--ant-white);
+  background: transparent;
+  color: #f2eee8;
+  color: var(--ant-white);
   padding: 0 24px;
   font-size: 12px;
   font-weight: 950;
   letter-spacing: 2px;
   text-transform: uppercase;
   cursor: pointer;
-  transition: opacity 0.2s ease, transform 0.2s ease;
+  transition: opacity 0.2s ease;
 }
 .antagonist-landing__button:hover {
-  opacity: 0.86;
+  opacity: 0.8;
 }
 .antagonist-landing__note {
   margin-top: 18px;
-  color: #888888;
+  color: #f2eee8;
+  color: var(--ant-white);
+  opacity: 0.85;
   font-size: 14px;
   letter-spacing: 0.04em;
 }
@@ -27302,8 +27329,14 @@ body.font-dinnextltarabic-regular .btn--add-to-cart {
   .antagonist-landing__hero {
     padding: 20px;
   }
+  .antagonist-landing__logo {
+    width: 78px;
+    height: 78px;
+  }
   .antagonist-landing__content {
+    align-items: flex-start;
     text-align: left;
+    padding-bottom: 40px;
   }
   .antagonist-landing__brand-main {
     font-size: max(52px, min(17vw, 86px));
@@ -27311,10 +27344,10 @@ body.font-dinnextltarabic-regular .btn--add-to-cart {
   .antagonist-landing__drop {
     font-size: 10px;
     letter-spacing: 3px;
-    margin-bottom: 34px;
+    margin-bottom: 30px;
   }
   .antagonist-landing__title {
-    font-size: max(54px, min(16vw, 82px));
+    font-size: max(50px, min(14vw, 82px));
   }
   .antagonist-landing__form {
     flex-direction: column;
@@ -27323,7 +27356,8 @@ body.font-dinnextltarabic-regular .btn--add-to-cart {
   }
   .antagonist-landing__button {
     border-left: 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.32);
+    border-top: 1.5px solid #f2eee8;
+    border-top: 1.5px solid var(--ant-white);
     padding: 18px;
   }
 }

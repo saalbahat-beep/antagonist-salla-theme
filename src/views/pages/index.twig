@@ -7,12 +7,15 @@
 {% block content %}
 
 <main class="antagonist-landing">
-
-  <div class="antagonist-landing__noise"></div>
-
   <section class="antagonist-landing__hero">
-    <div class="antagonist-landing__content">
 
+    <div class="antagonist-landing__topbar">
+      <div class="antagonist-landing__logo">
+        <img src="{{ 'images/ant-logo.png' | asset }}" alt="AnT logo">
+      </div>
+    </div>
+
+    <div class="antagonist-landing__content">
       <h1 class="antagonist-landing__brand-main">
         ANTAGONIST
       </h1>
@@ -22,7 +25,7 @@
       </p>
 
       <h2 class="antagonist-landing__title">
-        NOT FOR EVERYONE.
+        Not for everyone.
       </h2>
 
       <form class="antagonist-landing__form" action="#" method="post">
@@ -42,10 +45,9 @@
       <p class="antagonist-landing__note">
         Join the first colony.
       </p>
-
     </div>
-  </section>
 
+  </section>
 </main>
 
 {% endblock %}

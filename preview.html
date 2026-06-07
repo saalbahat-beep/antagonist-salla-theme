@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Antagonist Preview</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    :root {
+      --ant-brown: #7a3b00;
+      --ant-white: #f2eee8;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--ant-brown);
+      color: var(--ant-white);
+    }
+
+    .antagonist-landing {
+      min-height: 100vh;
+      background: var(--ant-brown);
+      color: var(--ant-white);
+    }
+
+    .antagonist-landing__hero {
+      min-height: 100vh;
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .antagonist-landing__topbar {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+
+    .antagonist-landing__logo {
+      width: 82px;
+      height: 82px;
+      flex-shrink: 0;
+    }
+
+    .antagonist-landing__logo img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .antagonist-landing__content {
+      flex: 1;
+      width: min(760px, 100%);
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .antagonist-landing__brand-main {
+      margin: 0;
+      font-size: clamp(42px, 9vw, 110px);
+      line-height: 0.9;
+      letter-spacing: -0.08em;
+      font-weight: 950;
+      text-transform: uppercase;
+      color: var(--ant-white);
+    }
+
+    .antagonist-landing__drop {
+      margin: 22px 0 36px;
+      color: var(--ant-white);
+      opacity: 0.85;
+      font-size: 12px;
+      letter-spacing: 5px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .antagonist-landing__title {
+      margin: 0;
+      font-size: clamp(48px, 8vw, 96px);
+      line-height: 0.95;
+      letter-spacing: -0.055em;
+      font-weight: 850;
+      text-transform: none;
+      color: var(--ant-white);
+    }
+
+    .antagonist-landing__form {
+      width: min(520px, 100%);
+      margin: 42px auto 0;
+      display: flex;
+      border: 1.5px solid var(--ant-white);
+      background: transparent;
+    }
+
+    .antagonist-landing__input {
+      flex: 1;
+      min-width: 0;
+      border: 0;
+      background: transparent;
+      color: var(--ant-white);
+      padding: 18px 18px;
+      font-size: 15px;
+      outline: none;
+      text-transform: lowercase;
+    }
+
+    .antagonist-landing__input::placeholder {
+      color: var(--ant-white);
+      opacity: 0.75;
+    }
+
+    .antagonist-landing__button {
+      border: 0;
+      border-left: 1.5px solid var(--ant-white);
+      background: transparent;
+      color: var(--ant-white);
+      padding: 0 24px;
+      font-size: 12px;
+      font-weight: 950;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: opacity 0.2s ease;
+    }
+
+    .antagonist-landing__button:hover {
+      opacity: 0.8;
+    }
+
+    .antagonist-landing__note {
+      margin-top: 18px;
+      color: var(--ant-white);
+      opacity: 0.85;
+      font-size: 14px;
+      letter-spacing: 0.04em;
+    }
+
+    @media (max-width: 700px) {
+      .antagonist-landing__hero {
+        padding: 20px;
+      }
+
+      .antagonist-landing__logo {
+        width: 78px;
+        height: 78px;
+      }
+
+      .antagonist-landing__content {
+        align-items: flex-start;
+        text-align: left;
+      }
+
+      .antagonist-landing__brand-main {
+        font-size: clamp(52px, 17vw, 86px);
+      }
+
+      .antagonist-landing__drop {
+        font-size: 10px;
+        letter-spacing: 3px;
+        margin-bottom: 30px;
+      }
+
+      .antagonist-landing__title {
+        font-size: clamp(50px, 14vw, 82px);
+      }
+
+      .antagonist-landing__form {
+        flex-direction: column;
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+      .antagonist-landing__button {
+        border-left: 0;
+        border-top: 1.5px solid var(--ant-white);
+        padding: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="antagonist-landing">
+    <section class="antagonist-landing__hero">
+
+      <div class="antagonist-landing__topbar">
+        <div class="antagonist-landing__logo">
+          <img src="./ant-logo.png" alt="AnT logo">
+        </div>
+      </div>
+
+      <div class="antagonist-landing__content">
+        <h1 class="antagonist-landing__brand-main">
+          ANTAGONIST
+        </h1>
+
+        <p class="antagonist-landing__drop">
+          DROP 001 — COMING SOON
+        </p>
+
+        <h2 class="antagonist-landing__title">
+          Not for everyone.
+        </h2>
+
+        <form class="antagonist-landing__form">
+          <input
+            class="antagonist-landing__input"
+            type="email"
+            placeholder="email"
+          >
+
+          <button class="antagonist-landing__button" type="button">
+            NOTIFY ME
+          </button>
+        </form>
+
+        <p class="antagonist-landing__note">
+          Join the first colony.
+        </p>
+      </div>
+
+    </section>
+  </main>
+</body>
+</html>
